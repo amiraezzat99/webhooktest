@@ -358,3 +358,8 @@ export const webHooks = async (req, res, next) => {
 //   "idempotency_key": null
 // },
 // "type": "checkout.session.completed"
+
+export const orders = async (req, res, next) => {
+  const orders = await orderModel.find({})
+  res.status(200).json({ orders })
+}

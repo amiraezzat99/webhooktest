@@ -25,4 +25,6 @@ router.post(
   express.raw({ type: 'application/json' }),
   asyncHandler(controllers.webHooks),
 )
+
+router.get('/', asyncHandler(controllers.orders))
 export default router
